@@ -74,6 +74,17 @@ python c:\WorkSpace\WalkSteps\Windows\table_app.py
     do ##class(MyHealth.Steps).createGlobal()
     ```
 
+3. 実行前の確認（[global_goiris.py](./global_goiris.py)）
+
+    2行目の sys.path のディレクトリを確認します。
+
+    以下2つのディレクトリをsys.pathに追加するように修正してください。
+
+    - IRISインストールディレクトリ/mgr/python
+    - IRISインストールディレクトリ/lib/python
+
+
+
 以上で準備は完了です。
 
 ## アプリケーション実行-グローバル編
