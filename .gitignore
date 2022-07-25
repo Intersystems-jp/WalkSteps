@@ -1,0 +1,4 @@
+.vscode/*
+Linux/__pycache__/*
+Windows/__pycache__/*
+memo.md

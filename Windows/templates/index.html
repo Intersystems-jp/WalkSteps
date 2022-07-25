@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="form">
+    <form action="/" method='POST'>
+        <H2>{{selectmonth}}月の歩数</H2>
+        <div class="alert alert-warning" role="alert">
+            <label for="title"> 確認したい月を指定してください。</label>
+            <select name="selectmonth">
+            {% for month in monthlist %}
+                <option value="{{ month }}">{{ month }}月</option>
+            {% endfor %}
+            </select>
+            <input type="submit" value="歩数確認">
+        </div>
+
+    </form>
+    {% if rdate != "" %}
+    <div class="card-body">
+        {{ image | safe }}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
