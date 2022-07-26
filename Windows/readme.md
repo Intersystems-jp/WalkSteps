@@ -32,7 +32,7 @@ pipを利用してインストールしてください（irispipではなく、p
 
     サンプルデータは、2022年5月1日～7月31日までの歩数データを作成します（ランダム生成なので実行の度に値が変わります）。
 
-    テーブルを利用する場合は、IRISにログインしUSERネームスペースで以下実行してください。
+    IRISにログインしUSERネームスペースで以下実行してください。
 
     ```
     do ##class(MyHealth.Steps).create()
@@ -69,7 +69,7 @@ python c:\WorkSpace\WalkSteps\Windows\table_app.py
 
 ![](../howtorenderhtml-glo.bmp)
 
-1. IRISに接続し、[MyHealth.Step.cls](../MyHealth/Steps.cls)をUSERネームスペースにいんぽーとします。
+1. IRISに接続し、[MyHealth.Step.cls](../MyHealth/Steps.cls)をUSERネームスペースにインポートします。
 
 2. データを作成します。
 
