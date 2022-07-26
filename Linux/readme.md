@@ -26,13 +26,13 @@ IRISからデータを取得する処理は [table_goiris.py](./table_goiris.py)
 
 ※グローバル変数を利用したサンプルをお試しいただく場合は、[グローバル変数を利用する場合の準備](#グローバル変数を利用する場合の準備)をご参照ください。
 
-1. IRISに接続し、[MyHealth.Step.cls](../MyHealth/Steps.cls)を保存し、コンパイルします。
+1. IRISに接続し、[MyHealth.Step.cls](../MyHealth/Steps.cls)をUSERネームスペースにインポートします。
 
 2. データを作成します。
 
     サンプルデータは、2022年5月1日～7月31日までの歩数データを作成します（ランダム生成なので実行の度に値が変わります）。
 
-    IRISにログインしクラス定義を保存したネームスペースで以下実行してください。
+    IRISにログインUSERネームスペースで以下実行してください。
 
     ```
     do ##class(MyHealth.Steps).create()
@@ -65,13 +65,13 @@ irispythonコマンドの後、table_app.py をフルパスで指定します。
 
 ![](../howtorenderhtml-glo.bmp)
 
-1. IRISに接続し、[MyHealth.Step.cls](../MyHealth/Steps.cls)を保存し、コンパイルします。
+1. IRISに接続し、[MyHealth.Step.cls](../MyHealth/Steps.cls)をUSERネームスペースにインポートします。
 
 2. データを作成します。
 
     サンプルデータは、2022年5月1日～7月31日までの歩数データを作成します（ランダム生成なので実行の度に値が変わります）。
 
-    IRISにログインしクラス定義を保存したネームスペースで以下実行してください。
+    IRISにログインし、USERネームスペースで以下実行してください。
 
     ```
     do ##class(MyHealth.Steps).createGlobal()

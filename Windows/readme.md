@@ -18,6 +18,7 @@ IRISからデータを取得する処理は [table_goiris.py](./table_goiris.py)
 
 ## 必要なモジュール
 
+pipを利用してインストールしてください（irispipではなく、pipでインストールしてください）。
 - flask
 - matplotlib
 
@@ -25,13 +26,13 @@ IRISからデータを取得する処理は [table_goiris.py](./table_goiris.py)
 
 ※グローバル変数を利用したサンプルをお試しいただく場合は、[グローバル変数を利用する場合の準備](#グローバル変数を利用する場合の準備)をご参照ください。
 
-1. IRISに接続し、[MyHealth.Step.cls](../MyHealth/Steps.cls)を保存し、コンパイルします。
+1. IRISに接続し、[MyHealth.Step.cls](../MyHealth/Steps.cls)をUSERネームスペースにインポートします。
 
 2. データを作成します。
 
     サンプルデータは、2022年5月1日～7月31日までの歩数データを作成します（ランダム生成なので実行の度に値が変わります）。
 
-    テーブルを利用する場合は、IRISにログインしクラス定義を保存したネームスペースで以下実行してください。
+    テーブルを利用する場合は、IRISにログインしUSERネームスペースで以下実行してください。
 
     ```
     do ##class(MyHealth.Steps).create()
@@ -68,13 +69,13 @@ python c:\WorkSpace\WalkSteps\Windows\table_app.py
 
 ![](../howtorenderhtml-glo.bmp)
 
-1. IRISに接続し、[MyHealth.Step.cls](../MyHealth/Steps.cls)を保存し、コンパイルします。
+1. IRISに接続し、[MyHealth.Step.cls](../MyHealth/Steps.cls)をUSERネームスペースにいんぽーとします。
 
 2. データを作成します。
 
     サンプルデータは、2022年5月1日～7月31日までの歩数データを作成します（ランダム生成なので実行の度に値が変わります）。
 
-    IRISにログインしクラス定義を保存したネームスペースで以下実行してください。
+    IRISにログインしUSERネームスペースで以下実行してください。
 
     ```
     do ##class(MyHealth.Steps).createGlobal()
