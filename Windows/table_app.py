@@ -14,8 +14,7 @@ def index():
     if request.method=='GET':
         defaultmonth=7
     else:
-        result=request.form
-        defaultmonth=result['selectmonth']
+        defaultmonth=request.form['selectmonth']
 
     #print(defaultmonth)
     #データ取得（テーブル編）
@@ -43,9 +42,10 @@ def index():
     #グラフをHTMLに埋め込むように変換
     data=base64.b64encode(buf.getbuffer()).decode('ascii')
     image_tag = f'<img src="data:image/png;base64,{data}"/>'
-    return render_template("index.html",image=image_tag,monthlist=monthlist,selectmonth=defaultmonth)
+    selected_month=int(defaultmonth)
+    return render_template("index.html",image=image_tag,monthlist=monthlist,selectmonth=defaultmonth,selected_month=selected_month)
 
 
 if __name__=="__main__":
     #app.run(debug=True,host='0,0,0,0',port="8081")
-    app.run(debug=True,host='0.0.0.0')
+    app.run(debug=False,host='0.0.0.0')

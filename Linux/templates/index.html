@@ -8,7 +8,7 @@
             <label for="title"> 確認したい月を指定してください。</label>
             <select name="selectmonth">
             {% for month in monthlist %}
-                <option value="{{ month }}">{{ month }}月</option>
+                <option value="{{ month }}" {% if selected_month == month %} selected {% endif %}>{{ month }}月</option>
             {% endfor %}
             </select>
             <input type="submit" value="歩数確認">
