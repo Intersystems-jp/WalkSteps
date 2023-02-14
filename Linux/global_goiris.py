@@ -11,7 +11,8 @@ def getMonthGlo():
         month=glo.order([2022,month])
         if (month==None):
             break
-        monthlist.append(month)
+        # cast to integer to make it compatible with sql version
+        monthlist.append(int(month))
     return monthlist        
 
 def createChartFromGlo(monthnumber):
